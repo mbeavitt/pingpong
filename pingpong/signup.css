@@ -1,0 +1,38 @@
+BODY {
+    background: url(pingpong_background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover; /*for webKit*/
+    -moz-background-size: cover; /*Mozilla*/
+    -o-background-size: cover; /*opera*/
+    background-size: cover; /*generic*/
+    padding-left:30px;
+
+}
+
+#auth_frame form {
+    margin-top: 136px;
+    position: relative;
+    z-index: 4;
+}
+
+#content {
+    display:block;
+    width:100%px;
+    height: 400px;
+}
+
+#page_header {
+    color:white;
+    font-family:helvetica;
+    font-size:40pt;
+}
+
+INPUT {
+    font-size: 20px;
+    line-height: 1.1;
+    padding: 8px 6px;
+    margin-left:10px;
+    width: 261px;
+    background-color: #fff;
+    border: 2px solid #282D2A;
+
+}
