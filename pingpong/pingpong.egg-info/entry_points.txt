@@ -1,0 +1,4 @@
+[console_scripts]
+start-pingpong = pingpong.command:start
+bootstrap-pingpong = pingpong.command:bootstrap
+

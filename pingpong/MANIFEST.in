@@ -1,0 +1,6 @@
+include start-pingpong.py
+include *.cfg
+include pingpong/config/*.cfg
+recursive-include pingpong/templates *.html
+recursive-include pingpong/templates *.kid
+recursive-include pingpong/static *
