@@ -7,6 +7,7 @@ __all__ = ['Root']
 # standard library imports
 # import logging
 import datetime
+import psycopg2
 
 # third-party imports
 from turbogears import controllers, expose, flash
@@ -27,4 +28,14 @@ class Root(controllers.RootController):
         """Show the welcome page."""
         # log.debug("Happy TurboGears Controller Responding For Duty")
         flash(_(u"Your application is now running"))
-        return dict(now=datetime.datetime.now())
+        return dict(now=datetime.datetime.now())	
+
+
+    @expose('pingpong.templates.listOfPlayers')
+    def listOfPlayers(self):
+        connection = psycopg2.connect("dbname=pingpong password=GJOUwF5b1G user=postgres host=/tmp/")
+        cursor = connection.cursor()
+        cursor.execute("SELECT * FROM player")
+        result = cursor.fetchall()
+        return dict(players = result)
+
